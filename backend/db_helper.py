@@ -56,11 +56,17 @@ def fetch_expense_summary_by_month():
         data = cursor.fetchall()
         return data
 
+def get_max_expense_date():
+    logger.info(f"get_max_expense_date called")
+    with get_db_cursor(commit=False) as cursor:
+        cursor.execute("SELECT MAX(expense_date) as last_expense_date from expenses")
+        data = cursor.fetchall()
+        return data
+
 
 if __name__ == "__main__":
-    expenses= fetch_expense_summary_by_month()
-    for record in expenses:
-     print(expenses)
+    expenses= get_max_expense_date()
+    print(expenses[0]['last_expense_date'])
 
 
 

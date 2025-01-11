@@ -64,3 +64,10 @@ def get_analytics_by_month():
             "total" : row['total']
         }
     return breakdown
+
+@app.get("/expense/date")
+def get_max_expense_date():
+    data = db_helper.get_max_expense_date()
+    if data is None:
+        raise HTTPException(status_code=500, detail ="Failed to retrieve expense summary from database")
+    return data

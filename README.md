@@ -31,3 +31,16 @@ This project is an expense management system that consists of a Streamlit fronte
    ```commandline
     streamlit run frontend/app.py
    ```
+# Front End
+![image](https://github.com/NisantaNayak/project_expense_tracking/blob/main/Frontend.png)
+
+# API Endpoints
+![image](https://github.com/NisantaNayak/project_expense_tracking/blob/main/Fast%20API.png)
+
+# Database
+![image](https://github.com/NisantaNayak/project_expense_tracking/blob/main/mysql-Expensense%20DB.png)
+
+
+
+
+
